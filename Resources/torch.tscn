@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3 uid="uid://cexs1mod2mgrv"]
+
+[ext_resource type="PackedScene" uid="uid://5ipcm67eax86" path="res://Assets/2310-torch/torch.fbx" id="1_egdww"]
+
+[sub_resource type="Gradient" id="Gradient_8faro"]
+offsets = PackedFloat32Array(0, 0.527273, 1)
+colors = PackedColorArray(0.867246, 0.54006, 0.127315, 1, 0.528425, 0.0759009, 3.89859e-06, 1, 0.775414, 0.62228, 0.141197, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_x2pw5"]
+gradient = SubResource("Gradient_8faro")
+
+[sub_resource type="Curve" id="Curve_dkvkw"]
+_data = [Vector2(0.0144928, 0), 0.0, 0.0, 0, 0, Vector2(0.181159, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.241758), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_nnsve"]
+curve = SubResource("Curve_dkvkw")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fonow"]
+angle_min = 1.07288e-05
+angle_max = 360.0
+direction = Vector3(0, 0, 1)
+spread = 0.0
+initial_velocity_max = 0.04
+angular_velocity_min = -1.60933e-05
+angular_velocity_max = 40.0
+gravity = Vector3(0, 0, 0)
+linear_accel_min = 0.999998
+linear_accel_max = 5.0
+scale_min = 0.05
+scale_max = 0.15
+scale_curve = SubResource("CurveTexture_nnsve")
+color_initial_ramp = SubResource("GradientTexture1D_x2pw5")
+hue_variation_min = -0.2
+hue_variation_max = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d84cv"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.745307, 0.386297, 0.137398, 1)
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_fp7ge"]
+material = SubResource("StandardMaterial3D_d84cv")
+
+[node name="torch" instance=ExtResource("1_egdww")]
+
+[node name="torch_Low" parent="." index="0"]
+transform = Transform3D(15, 0, 0, 0, -6.55671e-07, 15, 0, -15, -6.55671e-07, 0, 0, 0)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="torch_Low" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.811641, 0, 0, 0, 1, 0, -0.00707584, 0.0257381)
+amount = 500
+lifetime = 0.3
+randomness = 1.0
+draw_order = 3
+process_material = SubResource("ParticleProcessMaterial_fonow")
+draw_pass_1 = SubResource("QuadMesh_fp7ge")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="torch_Low/GPUParticles3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00977576)
+light_color = Color(1, 0.597798, 0.305315, 1)
+light_energy = 6.0
+light_indirect_energy = 6.0
+omni_range = 10.0

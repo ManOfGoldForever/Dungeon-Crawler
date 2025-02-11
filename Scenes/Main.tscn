@@ -1,0 +1,165 @@
+[gd_scene load_steps=15 format=3 uid="uid://dhf1ejyvnb8bi"]
+
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_n03um"]
+[ext_resource type="MeshLibrary" uid="uid://bqrbyee1uqsrj" path="res://Tilesets/dungeon_tileset.tres" id="2_l4vgv"]
+[ext_resource type="PackedScene" uid="uid://66xits4teq8l" path="res://Scenes/pause_menu.tscn" id="4_h3cdc"]
+[ext_resource type="FontFile" uid="uid://dggs8uoeu4td2" path="res://Fonts/Dungeon Crawler CB.ttf" id="5_vnlv2"]
+[ext_resource type="PackedScene" uid="uid://cexs1mod2mgrv" path="res://Resources/torch.tscn" id="6_p0kxb"]
+[ext_resource type="PackedScene" uid="uid://rvuko8gf076g" path="res://Resources/hammer.tscn" id="7_q2gpk"]
+[ext_resource type="PackedScene" uid="uid://dwius2m1s4dx5" path="res://Resources/great_sword.tscn" id="8_jbq5d"]
+[ext_resource type="PackedScene" uid="uid://bv7yidujbkwi" path="res://Enemies/goblin_male.tscn" id="9_n7o15"]
+[ext_resource type="PackedScene" uid="uid://g5towy6h11sy" path="res://Scenes/warrior.tscn" id="9_xlujn"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kbhsx"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_l35y1"]
+sky_material = SubResource("ProceduralSkyMaterial_kbhsx")
+
+[sub_resource type="Environment" id="Environment_eekjw"]
+background_mode = 2
+sky = SubResource("Sky_l35y1")
+ambient_light_color = Color(0.935992, 0.907529, 0.647222, 1)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.02
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.935992, 0.907529, 0.647222, 1)
+fog_light_energy = 0.02
+fog_density = 0.1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bqgal"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j5o7t"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_n03um")
+player_scene = ExtResource("9_xlujn")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_eekjw")
+
+[node name="Warrior" parent="." instance=ExtResource("9_xlujn")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 1.33497, 0)
+visible = false
+
+[node name="Skeleton3D" parent="Warrior/Armature" index="0"]
+bones/0/position = Vector3(-0.194158, 0.687619, -0.449943)
+bones/0/rotation = Quaternion(-0.196217, 0.0543119, -0.0248544, 0.97874)
+bones/0/scale = Vector3(1, 1, 1)
+bones/1/rotation = Quaternion(0.0215529, -1.16442e-08, 2.00281e-08, 0.999768)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/rotation = Quaternion(3.11411e-08, 9.31323e-10, -1.90921e-08, 1)
+bones/4/rotation = Quaternion(-1.03493e-07, 7.45058e-09, -2.79397e-08, 1)
+bones/8/rotation = Quaternion(-0.0215528, 3.72615e-09, 1.8165e-08, 0.999768)
+bones/8/scale = Vector3(1, 1, 1)
+bones/10/rotation = Quaternion(7.68341e-09, 9.31323e-10, -4.65661e-09, 1)
+bones/13/rotation = Quaternion(0.638518, 0.321168, -0.615044, 0.332967)
+bones/15/rotation = Quaternion(0.243595, 0.0444134, -0.0111673, 0.968795)
+bones/17/rotation = Quaternion(0.088406, 0.292208, 0.275757, 0.911459)
+bones/19/rotation = Quaternion(0.0288599, 0.00348939, 0.119978, 0.992351)
+bones/21/rotation = Quaternion(0.207767, 0.763984, -0.297514, 0.533523)
+bones/21/scale = Vector3(1, 1, 1)
+bones/22/rotation = Quaternion(1.49012e-08, 5.96046e-08, -1.3411e-07, 1)
+bones/23/rotation = Quaternion(2.04891e-08, -3.72529e-09, -2.98023e-08, 1)
+bones/25/rotation = Quaternion(0.63447, -0.323182, 0.61941, 0.330656)
+bones/25/scale = Vector3(1, 1, 1)
+bones/27/rotation = Quaternion(0.241889, -0.00686823, 0.00171221, 0.970278)
+bones/29/rotation = Quaternion(0.10273, -0.369743, -0.247205, 0.889734)
+bones/29/scale = Vector3(1, 1, 1)
+bones/31/rotation = Quaternion(-0.0162531, -8.45056e-05, 0.0051949, 0.999854)
+bones/33/rotation = Quaternion(0.286004, 0.603272, -0.245483, 0.702853)
+bones/33/scale = Vector3(1, 1, 1)
+bones/34/rotation = Quaternion(-2.90573e-07, 3.31551e-07, 2.34693e-07, 1)
+bones/35/rotation = Quaternion(3.72529e-09, -3.72529e-09, 0, 1)
+bones/37/rotation = Quaternion(0.000907377, 0.0767966, 0.996977, -0.0117816)
+bones/37/scale = Vector3(1, 1, 1)
+bones/38/rotation = Quaternion(-0.126046, -0.00171478, 0.0134942, 0.991931)
+bones/38/scale = Vector3(1, 1, 1)
+bones/39/rotation = Quaternion(0.533157, 0.00860853, -0.00542542, 0.845955)
+bones/39/scale = Vector3(1, 1, 1)
+bones/40/rotation = Quaternion(0.264688, -0.0807172, 0.022239, 0.960693)
+bones/42/rotation = Quaternion(-0.0001408, 0.0117609, 0.999859, 0.0119533)
+bones/42/scale = Vector3(1, 1, 1)
+bones/43/rotation = Quaternion(-0.0564604, 0.000724711, -0.0128172, 0.998322)
+bones/43/scale = Vector3(1, 1, 1)
+bones/44/rotation = Quaternion(0.526735, -0.00591042, 0.00366263, 0.850001)
+bones/45/rotation = Quaternion(0.267324, 0.0797374, -0.0222028, 0.960045)
+
+[node name="Arm" parent="Warrior/Armature/Skeleton3D" index="5"]
+transform = Transform3D(0.860634, -0.0676573, 0.504709, 0.299679, -0.734035, -0.609414, 0.411706, 0.675733, -0.61146, -0.628812, 0.722359, -0.262797)
+
+[node name="CollisionShape3D" parent="Warrior" index="2"]
+disabled = true
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh_library = ExtResource("2_l4vgv")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65535, 65535, 2, 65535, 0, 2, 0, 0, 2, 0, 65535, 2, 65534, 65534, 1048577, 1, 65534, 1, 1, 1, 1441793, 0, 2, 1441793, 65535, 2, 655361, 65533, 65535, 1048577, 65533, 0, 655361, 65534, 1, 655361, 65534, 65535, 1048579, 65534, 0, 655363, 65535, 1, 655363, 0, 1, 1441795, 0, 65534, 3, 65535, 65534, 1048579, 1, 65535, 3, 1, 0, 1441795, 2, 0, 1441793, 2, 65535, 1, 0, 65533, 1441792, 0, 65532, 1441792, 0, 65531, 1441792, 0, 65530, 1441792, 0, 65529, 1441792, 0, 65528, 1441792, 0, 65527, 1441792, 0, 65526, 1441792, 0, 65525, 1441792, 0, 65524, 1441792, 65535, 65524, 1048576, 65535, 65525, 1048576, 65535, 65526, 1048576, 65535, 65527, 1048576, 65535, 65528, 1048576, 65535, 65529, 1048576, 65535, 65530, 1048576, 65535, 65531, 1048576, 65535, 65532, 1048576, 65535, 65533, 1048576, 65535, 65523, 1048576, 65535, 65522, 1048576, 65535, 65521, 1048576, 0, 65523, 1441792, 0, 65522, 1441792, 0, 65521, 1441792, 1, 65520, 655360, 2, 65520, 655360, 3, 65520, 655360, 4, 65520, 655360, 65534, 65520, 655360, 65533, 65520, 655360, 65532, 65520, 655360, 65531, 65520, 655360, 65530, 65520, 655361, 65530, 65519, 1048576, 65530, 65518, 1048576, 65530, 65517, 1048576, 65530, 65512, 1048576, 65530, 65511, 1048576, 65530, 65510, 1048577, 65531, 65510, 0, 65532, 65510, 0, 65533, 65510, 0, 65534, 65510, 0, 65535, 65510, 0, 0, 65510, 0, 1, 65510, 0, 3, 65510, 0, 5, 65514, 1441792, 5, 65515, 1441792, 5, 65516, 1441792, 5, 65517, 1441792, 5, 65518, 1441792, 5, 65519, 1441792, 5, 65520, 1441793, 0, 65520, 1441795, 65535, 65520, 655363, 2, 65510, 0, 4, 65510, 0, 5, 65513, 1441792, 5, 65512, 1441792, 5, 65511, 1441792, 5, 65510, 1, 2, 65511, 655360, 3, 65512, 1048576, 1, 65512, 1441792, 2, 65513, 0, 3, 65511, 655363, 4, 65511, 2, 4, 65512, 2, 4, 65513, 2, 4, 65514, 2, 3, 65514, 2, 2, 65514, 2, 0, 65513, 2, 0, 65512, 2, 0, 65511, 2, 1, 65511, 1441795, 3, 65513, 1048579, 1, 65513, 3, 65530, 65513, 1048576, 65534, 65512, 1048576, 65533, 65511, 655360, 65532, 65512, 1441792, 65533, 65513, 0, 65534, 65511, 655363, 65534, 65513, 1048579, 65532, 65513, 3, 65532, 65511, 1441795, 65535, 65511, 1441794, 65535, 65512, 1441794, 65535, 65513, 1441794, 65532, 65514, 1441794, 65531, 65514, 1441794, 65531, 65513, 1441794, 65531, 65512, 1441794, 65531, 65511, 1441794, 2, 65519, 0, 1, 65518, 1441792, 2, 65517, 655360, 3, 65518, 1048576, 1, 65519, 3, 1, 65517, 1441795, 3, 65517, 655363, 3, 65519, 1048579, 0, 65519, 1048578, 0, 65518, 1048578, 0, 65517, 1048578, 2, 65515, 1048578, 3, 65515, 1048578, 4, 65515, 1048578, 4, 65516, 1048578, 3, 65516, 1048578, 2, 65516, 1048578, 4, 65517, 1048578, 4, 65518, 1048578, 4, 65519, 1048578, 65533, 65519, 0, 65532, 65518, 1441792, 65533, 65517, 655360, 65534, 65518, 1048576, 65534, 65519, 1048579, 65532, 65519, 3, 65532, 65517, 1441795, 65534, 65517, 655363, 65535, 65519, 655362, 65535, 65518, 655362, 65535, 65517, 655362, 65533, 65515, 655362, 65532, 65515, 655362, 65531, 65515, 655362, 65531, 65516, 655362, 65532, 65516, 655362, 65533, 65516, 655362, 65531, 65517, 655362, 65531, 65518, 655362, 65531, 65519, 655362, 65530, 65516, 1048576, 65530, 65515, 1048576, 65530, 65514, 1048576, 0, 65516, 0, 0, 65514, 655360, 1, 65515, 1048576, 1, 65516, 1048579, 1, 65514, 655363, 65535, 65516, 0, 65535, 65514, 655360, 65534, 65514, 1441795, 65534, 65516, 3, 65534, 65515, 1441792, 65533, 65514, 1441794)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="PauseMenu" parent="." instance=ExtResource("4_h3cdc")]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Host" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_vnlv2")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bqgal")
+text = "Host Game"
+
+[node name="Join" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_vnlv2")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_j5o7t")
+text = "Join Game"
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://Scenes/warrior.tscn")
+spawn_path = NodePath("..")
+
+[node name="Torches" type="Node3D" parent="."]
+
+[node name="torch" parent="Torches" instance=ExtResource("6_p0kxb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.80851, 1.6, 1.57733e-07)
+
+[node name="torch2" parent="Torches" instance=ExtResource("6_p0kxb")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 5.8297, 1.6, -1.78002e-08)
+
+[node name="GreatSword" parent="." instance=ExtResource("8_jbq5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48992, -1.78814e-07, -0.511967)
+
+[node name="Hammer" parent="." instance=ExtResource("7_q2gpk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.92865, 1.78814e-07, -1.12404)
+
+[node name="Goblin_Male" parent="." instance=ExtResource("9_n7o15")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.0414454, 0, -2.8442)
+
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/Host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/Join" to="." method="_on_join_pressed"]
+
+[editable path="Warrior"]

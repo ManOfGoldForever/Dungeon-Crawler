@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://0tnu77gh0ce7"
+path="res://.godot/imported/greatsword.obj-221c849341f6389037c3bf3aaab8c785.mesh"
+
+[deps]
+
+files=["res://.godot/imported/greatsword.obj-221c849341f6389037c3bf3aaab8c785.mesh"]
+
+source_file="res://Assets/stylised_weapons/stylised_weapons/stylised_greatsword/greatsword.obj"
+dest_files=["res://.godot/imported/greatsword.obj-221c849341f6389037c3bf3aaab8c785.mesh", "res://.godot/imported/greatsword.obj-221c849341f6389037c3bf3aaab8c785.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bga5bb8osl8x5"]
+
+[ext_resource type="PackedScene" uid="uid://c7f551m32nr7w" path="res://Assets/stylised_weapons/stylised_weapons/stylised_greatsword/greatsword_F.blend" id="1_t1hg0"]
+[ext_resource type="Script" path="res://Components/hitbox.gd" id="2_vrujx"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qvsog"]
+radius = 3.69085
+height = 51.6181
+
+[node name="GreatSword HR" instance=ExtResource("1_t1hg0")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+
+[node name="HitBox" type="Area3D" parent="." index="1"]
+script = ExtResource("2_vrujx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24.6411, 0)
+shape = SubResource("CapsuleShape3D_qvsog")
+disabled = true

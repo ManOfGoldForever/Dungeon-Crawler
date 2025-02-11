@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b543ijvwnq5d2"
+path="res://.godot/imported/hammer.obj-fa5f211b749bbe1210ad3abf623711fe.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hammer.obj-fa5f211b749bbe1210ad3abf623711fe.mesh"]
+
+source_file="res://Assets/stylised_weapons/stylised_weapons/stylised_hammer/hammer.obj"
+dest_files=["res://.godot/imported/hammer.obj-fa5f211b749bbe1210ad3abf623711fe.mesh", "res://.godot/imported/hammer.obj-fa5f211b749bbe1210ad3abf623711fe.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

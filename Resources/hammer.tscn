@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://rvuko8gf076g"]
+
+[ext_resource type="Script" path="res://Scripts/hammer.gd" id="1_0lmfi"]
+[ext_resource type="PackedScene" uid="uid://cowjl1hrlyqrq" path="res://Assets/stylised_weapons/stylised_weapons/stylised_hammer/hammer_F.blend" id="1_ctdc1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7v42m"]
+size = Vector3(0.186279, 1.1113, 0.468201)
+
+[node name="Hammer" type="RigidBody3D"]
+script = ExtResource("1_0lmfi")
+
+[node name="hammer_F" parent="." instance=ExtResource("1_ctdc1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.00598145, 1.102, 0.00601196)
+shape = SubResource("BoxShape3D_7v42m")
