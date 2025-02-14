@@ -3,8 +3,11 @@ extends CharacterBody3D
 var can_move = true
 var weapon_to_spawn
 var weapon_to_drop
-var is_jumping = false
-var is_attacking = false
+var holding_weapon = false
+var prev_state = ""
+var hitbox_weapon = ""
+var prev_grounded = false
+var current_blend_position = Vector2.ZERO
 
 @export var speed = 5.0
 @export var jump_velocity = 4.5
@@ -12,12 +15,13 @@ var is_attacking = false
 @export var horiz_sens = 0.004
 @export var vert_sens = 0.004
 
+@onready var state_machine = $StateMachine
+@onready var state_chart : StateChart = $StateChart
 @onready var neck := $Armature/Skeleton3D/Neck
 @onready var warrior = $Armature
 @onready var camera := $Armature/Skeleton3D/Neck/Camera3D
 @onready var reach = $Armature/Skeleton3D/Neck/Camera3D/Reach
 @onready var hand = $Armature/Skeleton3D/Arm/Hand
-@onready var animation_player = $AnimationPlayer
 @onready var hair = $Armature/Skeleton3D/Face__ncl1_29002
 @onready var body = $Armature/Skeleton3D/Warrior_Body__ncl1_29005
 @onready var L_pad = $Armature/Skeleton3D/ShoulderPadL__ncl1_29000
@@ -33,12 +37,7 @@ func _ready() -> void:
 	camera.current = is_multiplayer_authority()
 	if is_multiplayer_authority():  # This checks if this is the local player
 		hide_model_for_local_player()
-
-	animation_player.animation_finished.connect(_on_animation_finished)
-
-func _on_animation_finished(anim_name):
-	if anim_name == "GreatSwordSlash":  # Replace with the correct attack animation name
-		is_attacking = false
+		holding_weapon = false
 
 # Hide the model for the local player's camera
 func hide_model_for_local_player():
@@ -58,10 +57,15 @@ func HandlePickUpDrop():
 		if collider:
 			if collider.get_name() == "GreatSword":
 				weapon_to_spawn = greatsword_hr.instantiate()
+				hitbox_weapon = "GreatSword HR"
+				holding_weapon = true
 			elif collider.get_name() == "Hammer":
 				weapon_to_spawn = hammer_hr.instantiate()
+				hitbox_weapon = "Hammer HR"
+				holding_weapon = true
 			else:
 				weapon_to_spawn = null
+			state_machine.holding_weapon = holding_weapon
 
 		if hand.get_child_count() > 0:
 			var current_weapon = hand.get_child(0)
@@ -102,76 +106,58 @@ func _unhandled_input(event: InputEvent) -> void:
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(60))
 
 func _physics_process(delta: float) -> void:
+	state_machine.velocity = velocity
 	if is_multiplayer_authority():
 		if can_move:
-			# Declare input_dir and direction at the start
 			var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 			var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
-			# Add the gravity.
+			# Handle gravity if not on the floor
 			if not is_on_floor():
 				velocity.y += -gravity * delta
-				# If the player is not on the ground and wasn't already jumping, play the jump animation
-				if not is_jumping:
-					is_jumping = true
-					if hand.get_child_count() > 0:
-						animation_player.play("GreatSwordJump", 1)
-					else:
-						animation_player.play("Jump", 1)
+				if prev_state != "airborne":
+					state_chart.send_event("airborne")
+					prev_state = "airborne"
+				prev_grounded = false
 
-			# Handle jump.
+			# Handle grounded state only once when the player touches the floor
+			elif is_on_floor():
+				if not prev_grounded:
+					state_chart.send_event("grounded")
+					prev_grounded = true
+
+				# If the player is moving, send "moving"
+				if direction:
+					if prev_state != "moving":
+						state_chart.send_event("moving")
+						prev_state = "moving"
+					velocity.x = direction.x * speed
+					velocity.z = direction.z * speed
+
+				# If there's no input, send "idle"
+				else:
+					velocity.x = move_toward(velocity.x, 0, speed)
+					velocity.z = move_toward(velocity.z, 0, speed)
+					if prev_state != "idle":
+						state_chart.send_event("idle")
+						prev_state = "idle"
+
+			# Handle jump input
 			if Input.is_action_just_pressed("jump") and is_on_floor():
 				velocity.y = jump_velocity
-				if not is_jumping:
-					is_jumping = true
-					if hand.get_child_count() > 0:
-						animation_player.play("GreatSwordJump", 1)
-					else:
-						animation_player.play("Jump", 1)  # Play jump animation when the jump key is pressed
-			
-			if Input.is_action_just_pressed("Attack") and hand.get_child_count() > 0 and not is_attacking:
-				is_attacking = true
-				animation_player.play("GreatSwordSlash", 1)
-
-			# Check if the player is on the ground
-			if is_on_floor() and not is_attacking:
-				if is_jumping:  # Transition back to idle or walking after landing
-					is_jumping = false
-				if is_attacking:
-					is_attacking = false
-					# Play an idle or walking animation depending on movement
-				if input_dir.y > 0:
-					if hand.get_child_count() > 0:
-						animation_player.play("GreatSwordWalk", 1)
-					else:
-						animation_player.play("Walking", 1)
-				elif input_dir.y < 0:
-					if hand.get_child_count() > 0:
-						animation_player.play("GreatSwordWalkBack", 1)
-					else:
-						animation_player.play("StandingRunBack", 1)
-				elif input_dir.x > 0:
-					if hand.get_child_count() > 0:
-						animation_player.play("GreatSwordStrafeRight", 1)
-					else:
-						animation_player.play("RightStrafeWalking", 1)
-				elif input_dir.x < 0:
-					if hand.get_child_count() > 0:
-						animation_player.play("GreatSwordStrafeLeft", 1)
-					else:
-						animation_player.play("LeftStrafeWalking", 1)
-				else:
-					if hand.get_child_count() > 0:
-						animation_player.play("GreatSwordIdle", 1)
-					else:
-						animation_player.play("Idle", 1)
-
-			# Movement handling
-			if direction:
-				velocity.x = direction.x * speed
-				velocity.z = direction.z * speed
-			else:
-				velocity.x = move_toward(velocity.x, 0, speed)
-				velocity.z = move_toward(velocity.z, 0, speed)
+				if prev_state != "jump":
+					state_chart.send_event("jump")
+					prev_state = "jump"
 
 			move_and_slide()
+
+func enable_weapon_hitbox():
+	if holding_weapon:
+		var weapon = hand.get_child(0)
+		weapon.enable_hitbox()
+		
+
+func disable_weapon_hitbox():
+	if holding_weapon:
+		var weapon = hand.get_child(0)
+		weapon.disable_hitbox()

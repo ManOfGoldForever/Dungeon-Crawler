@@ -42,7 +42,7 @@ func add_player(id = 1):
 	
 	# Set spawn position for both players
 	if id == 1:  # Host (or player 1)
-		spawn_position = Vector3(0, 2, 0)  # Or wherever you'd like the spawn location to be
+		spawn_position = Vector3(0, 1, 0)  # Or wherever you'd like the spawn location to be
 	else:  # For joining player
 		spawn_position = Vector3(0, 2, 0)  # Could be updated to match a better logic
 	
