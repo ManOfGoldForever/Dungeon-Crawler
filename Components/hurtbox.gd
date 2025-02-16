@@ -12,4 +12,3 @@ func on_area_entered(hitbox: HitBox) -> void:
 	if hitbox != null:
 		health.health -= hitbox.damage
 		received_damage.emit(hitbox.damage)
-		print("ow")

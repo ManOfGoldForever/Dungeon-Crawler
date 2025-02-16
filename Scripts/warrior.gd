@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+class_name Warrior
+
 var can_move = true
 var weapon_to_spawn
 var weapon_to_drop
