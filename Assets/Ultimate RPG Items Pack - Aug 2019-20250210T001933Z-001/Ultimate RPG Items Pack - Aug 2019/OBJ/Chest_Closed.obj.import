@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://db7rt423j8i0k"
+path="res://.godot/imported/Chest_Closed.obj-42ce3a48ab4f72ade871fdbef5c95648.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Chest_Closed.obj-42ce3a48ab4f72ade871fdbef5c95648.mesh"]
+
+source_file="res://Assets/Ultimate RPG Items Pack - Aug 2019-20250210T001933Z-001/Ultimate RPG Items Pack - Aug 2019/OBJ/Chest_Closed.obj"
+dest_files=["res://.godot/imported/Chest_Closed.obj-42ce3a48ab4f72ade871fdbef5c95648.mesh", "res://.godot/imported/Chest_Closed.obj-42ce3a48ab4f72ade871fdbef5c95648.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

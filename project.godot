@@ -18,6 +18,7 @@ boot_splash/image="res://Art/OSOKLogo.png"
 [display]
 
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [dotnet]
 
@@ -26,6 +27,11 @@ project/assembly_name="Dungeon Crawler"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/godot_state_charts/plugin.cfg")
+
+[global_group]
+
+Player=""
+Enemy=""
 
 [input]
 

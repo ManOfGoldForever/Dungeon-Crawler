@@ -152,12 +152,14 @@ func _physics_process(delta: float) -> void:
 			move_and_slide()
 
 func enable_weapon_hitbox():
+	print("hi")
 	if holding_weapon:
 		var weapon = hand.get_child(0)
 		weapon.enable_hitbox()
 		
 
 func disable_weapon_hitbox():
+	print("hi")
 	if holding_weapon:
 		var weapon = hand.get_child(0)
 		weapon.disable_hitbox()

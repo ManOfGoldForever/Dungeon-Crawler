@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b3n44sxrttaq2"
+path="res://.godot/imported/Book1_Closed.obj-765a68daee1940dc664d9e6d23141da3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Book1_Closed.obj-765a68daee1940dc664d9e6d23141da3.mesh"]
+
+source_file="res://Assets/Ultimate RPG Items Pack - Aug 2019-20250210T001933Z-001/Ultimate RPG Items Pack - Aug 2019/OBJ/Book1_Closed.obj"
+dest_files=["res://.godot/imported/Book1_Closed.obj-765a68daee1940dc664d9e6d23141da3.mesh", "res://.godot/imported/Book1_Closed.obj-765a68daee1940dc664d9e6d23141da3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

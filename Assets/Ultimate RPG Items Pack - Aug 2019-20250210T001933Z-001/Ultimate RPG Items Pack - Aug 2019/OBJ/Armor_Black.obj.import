@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://crpyt0rs6bcxm"
+path="res://.godot/imported/Armor_Black.obj-b84159d63c2399001e7bee54dfed6817.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Armor_Black.obj-b84159d63c2399001e7bee54dfed6817.mesh"]
+
+source_file="res://Assets/Ultimate RPG Items Pack - Aug 2019-20250210T001933Z-001/Ultimate RPG Items Pack - Aug 2019/OBJ/Armor_Black.obj"
+dest_files=["res://.godot/imported/Armor_Black.obj-b84159d63c2399001e7bee54dfed6817.mesh", "res://.godot/imported/Armor_Black.obj-b84159d63c2399001e7bee54dfed6817.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ck0m0vgosou4s"
+path="res://.godot/imported/Armor_Golden.obj-ac3b1bfc22574d15b617ba5d5d2c730a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Armor_Golden.obj-ac3b1bfc22574d15b617ba5d5d2c730a.mesh"]
+
+source_file="res://Assets/Ultimate RPG Items Pack - Aug 2019-20250210T001933Z-001/Ultimate RPG Items Pack - Aug 2019/OBJ/Armor_Golden.obj"
+dest_files=["res://.godot/imported/Armor_Golden.obj-ac3b1bfc22574d15b617ba5d5d2c730a.mesh", "res://.godot/imported/Armor_Golden.obj-ac3b1bfc22574d15b617ba5d5d2c730a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cn3h6a80dfnl0"
+path="res://.godot/imported/Dart_Golden.obj-fad75971a64d13e2cb36c1bd12f8dab9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Dart_Golden.obj-fad75971a64d13e2cb36c1bd12f8dab9.mesh"]
+
+source_file="res://Assets/Ultimate RPG Items Pack - Aug 2019-20250210T001933Z-001/Ultimate RPG Items Pack - Aug 2019/OBJ/Dart_Golden.obj"
+dest_files=["res://.godot/imported/Dart_Golden.obj-fad75971a64d13e2cb36c1bd12f8dab9.mesh", "res://.godot/imported/Dart_Golden.obj-fad75971a64d13e2cb36c1bd12f8dab9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

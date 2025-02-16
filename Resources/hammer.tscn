@@ -1,17 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://rvuko8gf076g"]
+[gd_scene load_steps=4 format=3 uid="uid://cteac3bvhki2y"]
 
-[ext_resource type="Script" path="res://Scripts/hammer.gd" id="1_0lmfi"]
-[ext_resource type="PackedScene" uid="uid://cowjl1hrlyqrq" path="res://Assets/stylised_weapons/stylised_weapons/stylised_hammer/hammer_F.blend" id="1_ctdc1"]
+[ext_resource type="Script" path="res://Scripts/hammer.gd" id="1_uqre1"]
+[ext_resource type="ArrayMesh" uid="uid://bbst268uenttm" path="res://Assets/Ultimate RPG Items Pack - Aug 2019-20250210T001933Z-001/Ultimate RPG Items Pack - Aug 2019/OBJ/Hammer_Double.obj" id="2_qeayw"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_7v42m"]
-size = Vector3(0.186279, 1.1113, 0.468201)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6fmyt"]
+points = PackedVector3Array(-0.5795, 1.20147, -0.13738, -0.5795, 1.20147, 0.137784, -0.5795, 1.2554, -0.191186, -0.0840015, -0.765835, -2.90275e-05, -0.5795, 1.2554, 0.19159, -0.473627, 1.23338, -0.21433, 0.0107755, -0.765835, -0.0700066, -0.0635435, -0.765835, -0.0495089, -0.5795, 1.61606, -0.191186, -0.0226276, -0.826192, -2.90275e-05, -0.0635435, -0.765835, 0.0494509, 0.0107755, -0.765835, 0.0699485, -0.473627, 1.23338, 0.214776, -0.5795, 1.61606, 0.19159, -0.473627, 1.63782, -0.21433, 0.495294, 1.23338, -0.21433, 0.0852101, -0.765835, -0.0495089, 0.0107755, -0.826192, -0.0335057, 0.601167, 1.2554, -0.191186, -0.0128031, -0.826192, -0.0236769, -0.5795, 1.66973, -0.13738, -0.473627, 1.69818, -0.154055, -0.0128031, -0.826192, 0.0236188, 0.0107755, -0.826192, 0.0334476, 0.0852101, -0.765835, 0.0494509, 0.601167, 1.2554, 0.19159, 0.495294, 1.23338, 0.214776, -0.473627, 1.63782, 0.214776, -0.473627, 1.69818, 0.154459, -0.5795, 1.66973, 0.137784, 0.495294, 1.63782, -0.21433, 0.105668, -0.765835, -2.90275e-05, 0.0442942, -0.826192, -2.90275e-05, 0.0344697, -0.826192, -0.0236769, 0.601167, 1.20147, -0.13738, 0.601167, 1.61606, -0.191186, -0.149999, 1.7009, -0.000533059, -0.10758, 1.7009, -0.106633, 0.0127404, 1.7009, -0.151241, 0.495294, 1.69818, -0.154055, 0.0344697, -0.826192, 0.0236188, 0.601167, 1.20147, 0.137784, 0.601167, 1.61606, 0.19159, 0.495294, 1.63782, 0.214776, 0.495294, 1.69818, 0.154459, 0.0127404, 1.7009, 0.150175, -0.10758, 1.7009, 0.105567, 0.601167, 1.66973, -0.13738, 0.115955, 1.7009, -0.107011, 0.158489, 1.7009, -0.000533059, 0.601167, 1.66973, 0.137784, 0.115955, 1.7009, 0.105945)
 
 [node name="Hammer" type="RigidBody3D"]
-script = ExtResource("1_0lmfi")
+script = ExtResource("1_uqre1")
 
-[node name="hammer_F" parent="." instance=ExtResource("1_ctdc1")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+[node name="HammerDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_qeayw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.00598145, 1.102, 0.00601196)
-shape = SubResource("BoxShape3D_7v42m")
+shape = SubResource("ConvexPolygonShape3D_6fmyt")

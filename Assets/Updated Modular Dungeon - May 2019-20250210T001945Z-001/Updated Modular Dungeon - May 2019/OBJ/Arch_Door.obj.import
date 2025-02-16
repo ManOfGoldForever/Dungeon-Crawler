@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ea77pqrwdy07"
+path="res://.godot/imported/Arch_Door.obj-cf4864db7ff18dd25e4a3bdd5c8ee35a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Arch_Door.obj-cf4864db7ff18dd25e4a3bdd5c8ee35a.mesh"]
+
+source_file="res://Assets/Updated Modular Dungeon - May 2019-20250210T001945Z-001/Updated Modular Dungeon - May 2019/OBJ/Arch_Door.obj"
+dest_files=["res://.godot/imported/Arch_Door.obj-cf4864db7ff18dd25e4a3bdd5c8ee35a.mesh", "res://.godot/imported/Arch_Door.obj-cf4864db7ff18dd25e4a3bdd5c8ee35a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

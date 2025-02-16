@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c14ww6pn6j20s"
+path="res://.godot/imported/Ring6.obj-c23fe01a8f99e1e942d9d37b32e01176.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Ring6.obj-c23fe01a8f99e1e942d9d37b32e01176.mesh"]
+
+source_file="res://Assets/Ultimate RPG Items Pack - Aug 2019-20250210T001933Z-001/Ultimate RPG Items Pack - Aug 2019/OBJ/Ring6.obj"
+dest_files=["res://.godot/imported/Ring6.obj-c23fe01a8f99e1e942d9d37b32e01176.mesh", "res://.godot/imported/Ring6.obj-c23fe01a8f99e1e942d9d37b32e01176.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

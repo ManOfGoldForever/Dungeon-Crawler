@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://4qwlw8eqdvt"
+path="res://.godot/imported/Statue_Horse.obj-7f09be37ecd634a64d55ac6ceb1d7e27.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Statue_Horse.obj-7f09be37ecd634a64d55ac6ceb1d7e27.mesh"]
+
+source_file="res://Assets/Updated Modular Dungeon - May 2019-20250210T001945Z-001/Updated Modular Dungeon - May 2019/OBJ/Statue_Horse.obj"
+dest_files=["res://.godot/imported/Statue_Horse.obj-7f09be37ecd634a64d55ac6ceb1d7e27.mesh", "res://.godot/imported/Statue_Horse.obj-7f09be37ecd634a64d55ac6ceb1d7e27.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

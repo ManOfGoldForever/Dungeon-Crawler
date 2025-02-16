@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b3b51vnpalqxt"
+path="res://.godot/imported/Coin_Star.obj-d6709957814b0a3ae3ab20fe90207e4f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Coin_Star.obj-d6709957814b0a3ae3ab20fe90207e4f.mesh"]
+
+source_file="res://Assets/Ultimate RPG Items Pack - Aug 2019-20250210T001933Z-001/Ultimate RPG Items Pack - Aug 2019/OBJ/Coin_Star.obj"
+dest_files=["res://.godot/imported/Coin_Star.obj-d6709957814b0a3ae3ab20fe90207e4f.mesh", "res://.godot/imported/Coin_Star.obj-d6709957814b0a3ae3ab20fe90207e4f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

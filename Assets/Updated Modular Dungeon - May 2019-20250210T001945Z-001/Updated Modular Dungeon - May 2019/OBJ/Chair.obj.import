@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bwipg6qvj74vy"
+path="res://.godot/imported/Chair.obj-fadcab0d8470f8efa5863fb4ea33c2a4.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Chair.obj-fadcab0d8470f8efa5863fb4ea33c2a4.mesh"]
+
+source_file="res://Assets/Updated Modular Dungeon - May 2019-20250210T001945Z-001/Updated Modular Dungeon - May 2019/OBJ/Chair.obj"
+dest_files=["res://.godot/imported/Chair.obj-fadcab0d8470f8efa5863fb4ea33c2a4.mesh", "res://.godot/imported/Chair.obj-fadcab0d8470f8efa5863fb4ea33c2a4.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

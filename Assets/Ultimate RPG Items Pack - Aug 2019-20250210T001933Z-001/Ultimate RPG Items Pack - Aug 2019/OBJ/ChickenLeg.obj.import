@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b7j471t65bab3"
+path="res://.godot/imported/ChickenLeg.obj-31593bb40c6895d1b0f922434c14825f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ChickenLeg.obj-31593bb40c6895d1b0f922434c14825f.mesh"]
+
+source_file="res://Assets/Ultimate RPG Items Pack - Aug 2019-20250210T001933Z-001/Ultimate RPG Items Pack - Aug 2019/OBJ/ChickenLeg.obj"
+dest_files=["res://.godot/imported/ChickenLeg.obj-31593bb40c6895d1b0f922434c14825f.mesh", "res://.godot/imported/ChickenLeg.obj-31593bb40c6895d1b0f922434c14825f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

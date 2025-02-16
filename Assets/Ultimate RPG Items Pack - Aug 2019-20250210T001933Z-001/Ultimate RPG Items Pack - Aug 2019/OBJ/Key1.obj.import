@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://govumvtp24ch"
+path="res://.godot/imported/Key1.obj-c8cd9156d16b1450e675e2ef1d2e91af.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Key1.obj-c8cd9156d16b1450e675e2ef1d2e91af.mesh"]
+
+source_file="res://Assets/Ultimate RPG Items Pack - Aug 2019-20250210T001933Z-001/Ultimate RPG Items Pack - Aug 2019/OBJ/Key1.obj"
+dest_files=["res://.godot/imported/Key1.obj-c8cd9156d16b1450e675e2ef1d2e91af.mesh", "res://.godot/imported/Key1.obj-c8cd9156d16b1450e675e2ef1d2e91af.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

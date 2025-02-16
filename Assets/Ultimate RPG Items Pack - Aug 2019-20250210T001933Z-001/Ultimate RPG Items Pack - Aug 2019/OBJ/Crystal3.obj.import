@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ckypco7uswofc"
+path="res://.godot/imported/Crystal3.obj-cf0885de6ca2dc24858afab0b3eedf6f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Crystal3.obj-cf0885de6ca2dc24858afab0b3eedf6f.mesh"]
+
+source_file="res://Assets/Ultimate RPG Items Pack - Aug 2019-20250210T001933Z-001/Ultimate RPG Items Pack - Aug 2019/OBJ/Crystal3.obj"
+dest_files=["res://.godot/imported/Crystal3.obj-cf0885de6ca2dc24858afab0b3eedf6f.mesh", "res://.godot/imported/Crystal3.obj-cf0885de6ca2dc24858afab0b3eedf6f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

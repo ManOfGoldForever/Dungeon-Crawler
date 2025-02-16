@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d3lon5mxulww6"
+path="res://.godot/imported/Floor_BricksSeparate.obj-656ee9ce94167a5097d9389566987a64.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Floor_BricksSeparate.obj-656ee9ce94167a5097d9389566987a64.mesh"]
+
+source_file="res://Assets/Updated Modular Dungeon - May 2019-20250210T001945Z-001/Updated Modular Dungeon - May 2019/OBJ/Floor_BricksSeparate.obj"
+dest_files=["res://.godot/imported/Floor_BricksSeparate.obj-656ee9ce94167a5097d9389566987a64.mesh", "res://.godot/imported/Floor_BricksSeparate.obj-656ee9ce94167a5097d9389566987a64.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

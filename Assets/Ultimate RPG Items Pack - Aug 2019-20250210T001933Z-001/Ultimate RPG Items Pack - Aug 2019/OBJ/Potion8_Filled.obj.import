@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://do4ac2eiu4gte"
+path="res://.godot/imported/Potion8_Filled.obj-d7b31905fba7c1024cf292f8762248c2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Potion8_Filled.obj-d7b31905fba7c1024cf292f8762248c2.mesh"]
+
+source_file="res://Assets/Ultimate RPG Items Pack - Aug 2019-20250210T001933Z-001/Ultimate RPG Items Pack - Aug 2019/OBJ/Potion8_Filled.obj"
+dest_files=["res://.godot/imported/Potion8_Filled.obj-d7b31905fba7c1024cf292f8762248c2.mesh", "res://.godot/imported/Potion8_Filled.obj-d7b31905fba7c1024cf292f8762248c2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

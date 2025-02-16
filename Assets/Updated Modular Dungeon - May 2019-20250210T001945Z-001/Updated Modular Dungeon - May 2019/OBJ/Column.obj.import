@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://doxy1j371c3k8"
+path="res://.godot/imported/Column.obj-5ca2be62044019fab64b3925bcd0b30e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Column.obj-5ca2be62044019fab64b3925bcd0b30e.mesh"]
+
+source_file="res://Assets/Updated Modular Dungeon - May 2019-20250210T001945Z-001/Updated Modular Dungeon - May 2019/OBJ/Column.obj"
+dest_files=["res://.godot/imported/Column.obj-5ca2be62044019fab64b3925bcd0b30e.mesh", "res://.godot/imported/Column.obj-5ca2be62044019fab64b3925bcd0b30e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

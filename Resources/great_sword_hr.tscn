@@ -1,21 +1,31 @@
 [gd_scene load_steps=5 format=3 uid="uid://bga5bb8osl8x5"]
 
-[ext_resource type="PackedScene" uid="uid://c7f551m32nr7w" path="res://Assets/stylised_weapons/stylised_weapons/stylised_greatsword/greatsword_F.blend" id="1_t1hg0"]
-[ext_resource type="Script" path="res://Scripts/great_sword_hr.gd" id="2_t4suc"]
+[ext_resource type="ArrayMesh" uid="uid://byw2inolemum5" path="res://Assets/Ultimate RPG Items Pack - Aug 2019-20250210T001933Z-001/Ultimate RPG Items Pack - Aug 2019/OBJ/Sword_big.obj" id="1_puoj6"]
 [ext_resource type="Script" path="res://Components/hitbox.gd" id="2_vrujx"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qvsog"]
-radius = 3.69085
-height = 51.6181
+[sub_resource type="GDScript" id="GDScript_cfg2p"]
+script/source = "extends Node3D
 
-[node name="GreatSword HR" instance=ExtResource("1_t1hg0")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
-script = ExtResource("2_t4suc")
 
-[node name="HitBox" type="Area3D" parent="." index="1"]
+
+func enable_hitbox():
+	get_node(\"HitBox\").set_deferred(\"monitorable\", true)
+func disable_hitbox():
+	get_node(\"HitBox\").set_deferred(\"monitorable\", true)
+"
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rba4y"]
+points = PackedVector3Array(-0.216567, 0.600581, -0.0347235, -0.216058, 0.542494, -0.0347235, -0.216567, 0.600581, 0.0347135, -0.124946, 1.96602, -9.913e-06, -0.108792, 2.19435, -9.913e-06, -0.0818698, 2.19435, -0.0143632, -0.0556257, 2.35496, -0.0143632, -0.0340877, 2.4706, -0.0143632, -4.23938e-05, 0.650102, -0.0490966, -4.23938e-05, -0.150531, -0.050633, -0.216058, 0.542494, 0.0347135, -0.053845, -0.150531, -0.0358039, -0.0686417, -0.150531, -9.913e-06, -4.23938e-05, 0.650102, 0.0490867, -0.0340877, 2.4706, 0.0143533, -0.0556257, 2.35496, 0.0143533, -0.0818698, 2.19435, 0.0143533, -4.23938e-05, -0.150531, 0.050633, -0.0932747, 2.29982, -9.913e-06, -0.0733903, 2.39297, -9.913e-06, -0.0539297, 2.4805, -9.913e-06, -4.23938e-05, 2.54849, -0.0143632, 0.0340453, 2.4706, -0.0143632, 0.216567, 0.600581, -0.0347235, 0.0537602, -0.150531, -0.0358039, 0.215973, 0.542494, -0.0347235, -0.053845, -0.150531, 0.035794, 0.216567, 0.600581, 0.0347135, 0.0340453, 2.4706, 0.0143533, -4.23938e-05, 2.54849, 0.0143533, 0.0537602, -0.150531, 0.035794, 0.215973, 0.542494, 0.0347135, -4.23938e-05, 2.5841, 0.000237901, 0.0538874, 2.4805, -9.913e-06, 0.0733479, 2.39297, -9.913e-06, 0.09319, 2.29982, -9.913e-06, 0.0555833, 2.35496, -0.0143632, 0.0818274, 2.19435, -0.0143632, 0.10875, 2.19435, -9.913e-06, 0.124903, 1.96602, -9.913e-06, 0.0685994, -0.150531, -9.913e-06, 0.0818274, 2.19435, 0.0143533, 0.0555833, 2.35496, 0.0143533)
+
+[node name="GreatSword HR" type="Node3D"]
+script = SubResource("GDScript_cfg2p")
+
+[node name="SwordBig" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_puoj6")
+
+[node name="HitBox" type="Area3D" parent="."]
 monitorable = false
 script = ExtResource("2_vrujx")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24.6411, 0)
-shape = SubResource("CapsuleShape3D_qvsog")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
+shape = SubResource("ConvexPolygonShape3D_rba4y")

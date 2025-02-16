@@ -1,7 +1,11 @@
 extends Node3D
 
-func enable_hitbox():
-	get_node("HitBox/CollisionShape3D").set_deferred("disabled", false)
 
-func disable_hitbox():
-	get_node("HitBox/CollisionShape3D").set_deferred("disabled", true)
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass

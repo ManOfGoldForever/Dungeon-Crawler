@@ -34,7 +34,7 @@ import_script/path=""
 _subresources={
 "animations": {
 "DyingBackwards": {
-"save_to_file/enabled": true,
+"save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://Character/DyingBackwards.res",
 "settings/loop_mode": 0,
@@ -1833,7 +1833,7 @@ _subresources={
 "slices/amount": 0
 },
 "GreatSwordIdle": {
-"save_to_file/enabled": true,
+"save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://Character/GreatSwordIdle.res",
 "settings/loop_mode": 0,
@@ -3632,7 +3632,7 @@ _subresources={
 "slices/amount": 0
 },
 "GreatSwordImpact": {
-"save_to_file/enabled": true,
+"save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://Character/GreatSwordImpact.res",
 "settings/loop_mode": 0,
@@ -5431,7 +5431,7 @@ _subresources={
 "slices/amount": 0
 },
 "GreatSwordJump": {
-"save_to_file/enabled": true,
+"save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://Character/GreatSwordJump.res",
 "settings/loop_mode": 0,
@@ -7231,7 +7231,7 @@ _subresources={
 },
 "GreatSwordSlash": {
 "save_to_file/enabled": true,
-"save_to_file/keep_custom_tracks": "",
+"save_to_file/keep_custom_tracks": true,
 "save_to_file/path": "res://Character/GreatSwordSlash.res",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
@@ -9029,7 +9029,7 @@ _subresources={
 "slices/amount": 0
 },
 "GreatSwordStrafeLeft": {
-"save_to_file/enabled": true,
+"save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://Character/GreatSwordStrafeLeft.res",
 "settings/loop_mode": 0,
@@ -10828,7 +10828,7 @@ _subresources={
 "slices/amount": 0
 },
 "GreatSwordStrafeRight": {
-"save_to_file/enabled": true,
+"save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://Character/GreatSwordStrafeRight.res",
 "settings/loop_mode": 0,
@@ -12627,7 +12627,7 @@ _subresources={
 "slices/amount": 0
 },
 "GreatSwordWalk": {
-"save_to_file/enabled": true,
+"save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://Character/GreatSwordWalk.res",
 "settings/loop_mode": 0,
@@ -14426,7 +14426,7 @@ _subresources={
 "slices/amount": 0
 },
 "GreatSwordWalkBack": {
-"save_to_file/enabled": true,
+"save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://Character/GreatSwordWalkBack.res",
 "settings/loop_mode": 0,
@@ -16225,7 +16225,7 @@ _subresources={
 "slices/amount": 0
 },
 "Idle": {
-"save_to_file/enabled": true,
+"save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://Character/Idle.res",
 "settings/loop_mode": 0,
@@ -18024,7 +18024,7 @@ _subresources={
 "slices/amount": 0
 },
 "Jump": {
-"save_to_file/enabled": true,
+"save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://Character/Jump.res",
 "settings/loop_mode": 0,
@@ -19823,7 +19823,7 @@ _subresources={
 "slices/amount": 0
 },
 "LeftStrafeWalking": {
-"save_to_file/enabled": true,
+"save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://Character/LeftStrafeWalking.res",
 "settings/loop_mode": 0,
@@ -21622,7 +21622,7 @@ _subresources={
 "slices/amount": 0
 },
 "RightStrafeWalking": {
-"save_to_file/enabled": true,
+"save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://Character/RightStrafeWalking.res",
 "settings/loop_mode": 0,
@@ -23421,7 +23421,7 @@ _subresources={
 "slices/amount": 0
 },
 "Running": {
-"save_to_file/enabled": true,
+"save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://Character/Running.res",
 "settings/loop_mode": 0,
@@ -25220,7 +25220,7 @@ _subresources={
 "slices/amount": 0
 },
 "StandUp": {
-"save_to_file/enabled": true,
+"save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://Character/StandUp.res",
 "settings/loop_mode": 0,
@@ -27019,7 +27019,7 @@ _subresources={
 "slices/amount": 0
 },
 "StandingRunBack": {
-"save_to_file/enabled": true,
+"save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://Character/StandingRunBack.res",
 "settings/loop_mode": 0,
@@ -28818,7 +28818,7 @@ _subresources={
 "slices/amount": 0
 },
 "StomachHit": {
-"save_to_file/enabled": true,
+"save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://Character/StomachHit.res",
 "settings/loop_mode": 0,
@@ -30617,7 +30617,7 @@ _subresources={
 "slices/amount": 0
 },
 "TwoHandedSwordDeath": {
-"save_to_file/enabled": true,
+"save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://Character/TwoHandedSwordDeath.res",
 "settings/loop_mode": 0,
@@ -32416,7 +32416,7 @@ _subresources={
 "slices/amount": 0
 },
 "Walking": {
-"save_to_file/enabled": true,
+"save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://Character/Walking.res",
 "settings/loop_mode": 0,
@@ -34215,7 +34215,7 @@ _subresources={
 "slices/amount": 0
 },
 "mixamo_com": {
-"save_to_file/enabled": true,
+"save_to_file/enabled": false,
 "save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://Character/mixamo_com.res",
 "settings/loop_mode": 0,

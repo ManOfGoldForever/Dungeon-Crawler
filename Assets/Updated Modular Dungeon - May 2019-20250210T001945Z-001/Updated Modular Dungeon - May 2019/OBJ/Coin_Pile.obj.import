@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://caijutbhh748u"
+path="res://.godot/imported/Coin_Pile.obj-12e005a55069742f75d9b7ddec1db4af.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Coin_Pile.obj-12e005a55069742f75d9b7ddec1db4af.mesh"]
+
+source_file="res://Assets/Updated Modular Dungeon - May 2019-20250210T001945Z-001/Updated Modular Dungeon - May 2019/OBJ/Coin_Pile.obj"
+dest_files=["res://.godot/imported/Coin_Pile.obj-12e005a55069742f75d9b7ddec1db4af.mesh", "res://.godot/imported/Coin_Pile.obj-12e005a55069742f75d9b7ddec1db4af.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

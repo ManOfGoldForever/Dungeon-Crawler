@@ -1,21 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4i55runp2tc1"]
+[gd_scene load_steps=5 format=3 uid="uid://6haoa5ao1v6o"]
 
-[ext_resource type="PackedScene" uid="uid://cowjl1hrlyqrq" path="res://Assets/stylised_weapons/stylised_weapons/stylised_hammer/hammer_F.blend" id="1_68ep0"]
+[ext_resource type="ArrayMesh" uid="uid://bbst268uenttm" path="res://Assets/Ultimate RPG Items Pack - Aug 2019-20250210T001933Z-001/Ultimate RPG Items Pack - Aug 2019/OBJ/Hammer_Double.obj" id="1_mc26u"]
 [ext_resource type="Script" path="res://Components/hitbox.gd" id="2_ifycu"]
-[ext_resource type="Script" path="res://Scripts/hammer_hr.gd" id="2_snvdu"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e7gtm"]
-radius = 2.91165
-height = 12.1429
+[sub_resource type="GDScript" id="GDScript_jvygb"]
+script/source = "extends Node3D
 
-[node name="Hammer HR" instance=ExtResource("1_68ep0")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
-script = ExtResource("2_snvdu")
+func enable_hitbox():
+	get_node(\"HitBox/CollisionShape3D\").set_deferred(\"disabled\", false)
 
-[node name="HitBox" type="Area3D" parent="." index="1"]
+func disable_hitbox():
+	get_node(\"HitBox/CollisionShape3D\").set_deferred(\"disabled\", true)
+"
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tlb5y"]
+points = PackedVector3Array(-0.5795, 1.20147, -0.13738, -0.5795, 1.20147, 0.137784, -0.5795, 1.2554, -0.191186, -0.0840015, -0.765835, -2.90275e-05, -0.5795, 1.2554, 0.19159, -0.473627, 1.23338, -0.21433, 0.0107755, -0.765835, -0.0700066, -0.0635435, -0.765835, -0.0495089, -0.5795, 1.61606, -0.191186, -0.0226276, -0.826192, -2.90275e-05, -0.0635435, -0.765835, 0.0494509, 0.0107755, -0.765835, 0.0699485, -0.473627, 1.23338, 0.214776, -0.5795, 1.61606, 0.19159, -0.473627, 1.63782, -0.21433, 0.495294, 1.23338, -0.21433, 0.0852101, -0.765835, -0.0495089, 0.0107755, -0.826192, -0.0335057, 0.601167, 1.2554, -0.191186, -0.0128031, -0.826192, -0.0236769, -0.5795, 1.66973, -0.13738, -0.473627, 1.69818, -0.154055, -0.0128031, -0.826192, 0.0236188, 0.0107755, -0.826192, 0.0334476, 0.0852101, -0.765835, 0.0494509, 0.601167, 1.2554, 0.19159, 0.495294, 1.23338, 0.214776, -0.473627, 1.63782, 0.214776, -0.473627, 1.69818, 0.154459, -0.5795, 1.66973, 0.137784, 0.495294, 1.63782, -0.21433, 0.105668, -0.765835, -2.90275e-05, 0.0442942, -0.826192, -2.90275e-05, 0.0344697, -0.826192, -0.0236769, 0.601167, 1.20147, -0.13738, 0.601167, 1.61606, -0.191186, -0.149999, 1.7009, -0.000533059, -0.10758, 1.7009, -0.106633, 0.0127404, 1.7009, -0.151241, 0.495294, 1.69818, -0.154055, 0.0344697, -0.826192, 0.0236188, 0.601167, 1.20147, 0.137784, 0.601167, 1.61606, 0.19159, 0.495294, 1.63782, 0.214776, 0.495294, 1.69818, 0.154459, 0.0127404, 1.7009, 0.150175, -0.10758, 1.7009, 0.105567, 0.601167, 1.66973, -0.13738, 0.115955, 1.7009, -0.107011, 0.158489, 1.7009, -0.000533059, 0.601167, 1.66973, 0.137784, 0.115955, 1.7009, 0.105945)
+
+[node name="Hammer HR" type="Node3D"]
+script = SubResource("GDScript_jvygb")
+
+[node name="HammerDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_mc26u")
+
+[node name="HitBox" type="Area3D" parent="HammerDouble"]
+transform = Transform3D(1.33333, 0, 0, 0, 1.33333, 0, 0, 0, 1.33333, 0, 0, 0)
 monitorable = false
 script = ExtResource("2_ifycu")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.84729, 0)
-shape = SubResource("CapsuleShape3D_e7gtm")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HammerDouble/HitBox"]
+transform = Transform3D(0.750002, 0, 0, 0, 0.750002, 0, 0, 0, 0.750002, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_tlb5y")

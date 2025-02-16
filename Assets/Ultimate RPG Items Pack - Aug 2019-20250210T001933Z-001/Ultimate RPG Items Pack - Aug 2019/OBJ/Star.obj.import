@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cfb5kblsva7pj"
+path="res://.godot/imported/Star.obj-352a3744e1d93bd2a6dc69515c6be9f0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Star.obj-352a3744e1d93bd2a6dc69515c6be9f0.mesh"]
+
+source_file="res://Assets/Ultimate RPG Items Pack - Aug 2019-20250210T001933Z-001/Ultimate RPG Items Pack - Aug 2019/OBJ/Star.obj"
+dest_files=["res://.godot/imported/Star.obj-352a3744e1d93bd2a6dc69515c6be9f0.mesh", "res://.godot/imported/Star.obj-352a3744e1d93bd2a6dc69515c6be9f0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

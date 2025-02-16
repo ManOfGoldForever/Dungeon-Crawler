@@ -1,15 +1,14 @@
 [gd_scene load_steps=16 format=3 uid="uid://dhf1ejyvnb8bi"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_n03um"]
-[ext_resource type="MeshLibrary" uid="uid://bqrbyee1uqsrj" path="res://Tilesets/dungeon_tileset.tres" id="2_l4vgv"]
+[ext_resource type="MeshLibrary" uid="uid://bg3t8hulc78pi" path="res://Tilesets/new_dungeon_tileset.tres" id="3_f5agq"]
 [ext_resource type="PackedScene" uid="uid://66xits4teq8l" path="res://Scenes/pause_menu.tscn" id="4_h3cdc"]
 [ext_resource type="FontFile" uid="uid://dggs8uoeu4td2" path="res://Fonts/Dungeon Crawler CB.ttf" id="5_vnlv2"]
 [ext_resource type="PackedScene" uid="uid://cexs1mod2mgrv" path="res://Resources/torch.tscn" id="6_p0kxb"]
-[ext_resource type="PackedScene" uid="uid://rvuko8gf076g" path="res://Resources/hammer.tscn" id="7_q2gpk"]
+[ext_resource type="PackedScene" uid="uid://cteac3bvhki2y" path="res://Resources/hammer.tscn" id="7_q2gpk"]
 [ext_resource type="PackedScene" uid="uid://dwius2m1s4dx5" path="res://Resources/great_sword.tscn" id="8_jbq5d"]
 [ext_resource type="PackedScene" uid="uid://bv7yidujbkwi" path="res://Enemies/goblin_male.tscn" id="9_n7o15"]
 [ext_resource type="PackedScene" uid="uid://g5towy6h11sy" path="res://Scenes/warrior.tscn" id="9_xlujn"]
-[ext_resource type="PackedScene" uid="uid://bcwkugn6v3oy7" path="res://addons/godot_state_charts/utilities/state_chart_debugger.tscn" id="10_sr8pd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kbhsx"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -35,6 +34,11 @@ fog_density = 0.1
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j5o7t"]
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_dos0o"]
+vertices = PackedVector3Array(10.5619, 8.49967, 5.06122, 11.0619, 8.49967, 3.81122, 10.8119, 8.49967, -10.9388, -8.93807, 8.49967, -10.9388, -8.93807, 8.49967, 4.81122, 2.81193, 0.499672, -9.43878, 2.56193, 0.499672, -10.6888, -0.688072, 0.499672, -10.6888, -0.938072, 0.499672, -9.43878, -3.18807, 0.499672, -3.18878, 5.06193, 0.499672, -3.18878, 5.06193, 0.499672, -4.43878, -3.18807, 0.499672, -4.68878, -3.18807, 0.749672, -9.43878, -4.43807, 0.499672, -4.93878, 6.56193, 0.499672, -4.93878, 5.31193, 0.749672, -9.43878, -6.93807, 0.499672, -4.43878, -6.43807, 0.749672, -4.43878, -6.43807, 0.499672, -4.93878, -7.93807, 0.749672, -9.93878, -3.68807, 0.749672, -9.93878, -4.93807, 0.499672, 4.06122, -5.18807, 0.499672, -1.18878, -6.68807, 0.749672, -1.18878, -7.93807, 0.499672, 4.06122, 10.0619, 0.499672, -9.93878, 5.81193, 0.499672, -9.93878, 8.81193, 0.499672, -4.68878, 8.31193, 0.749672, -1.18878, 6.81193, 0.499672, -1.18878, 6.56193, 0.499672, 4.06122, 10.0619, 0.499672, 4.06122, 8.81193, 0.749672, -1.68878, 5.31193, 0.749672, -1.18878, -3.68807, 0.749672, -1.18878, -3.18807, 0.749672, -1.68878)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(6, 5, 7), PackedInt32Array(7, 5, 8), PackedInt32Array(11, 10, 5), PackedInt32Array(5, 10, 8), PackedInt32Array(8, 10, 12), PackedInt32Array(12, 10, 9), PackedInt32Array(14, 13, 12), PackedInt32Array(12, 13, 8), PackedInt32Array(15, 11, 16), PackedInt32Array(16, 11, 5), PackedInt32Array(18, 17, 19), PackedInt32Array(19, 17, 20), PackedInt32Array(21, 13, 20), PackedInt32Array(20, 13, 19), PackedInt32Array(19, 13, 14), PackedInt32Array(23, 22, 24), PackedInt32Array(24, 22, 25), PackedInt32Array(24, 25, 17), PackedInt32Array(17, 25, 20), PackedInt32Array(27, 26, 16), PackedInt32Array(16, 26, 15), PackedInt32Array(15, 26, 28), PackedInt32Array(30, 29, 31), PackedInt32Array(31, 29, 32), PackedInt32Array(28, 26, 33), PackedInt32Array(33, 26, 32), PackedInt32Array(32, 29, 33), PackedInt32Array(34, 30, 31), PackedInt32Array(22, 23, 35), PackedInt32Array(35, 36, 22), PackedInt32Array(22, 36, 34), PackedInt32Array(22, 34, 31), PackedInt32Array(9, 10, 36), PackedInt32Array(36, 10, 34)]
+agent_max_slope = 60.0
+
 [node name="Main" type="Node3D"]
 script = ExtResource("1_n03um")
 player_scene = ExtResource("9_xlujn")
@@ -43,52 +47,42 @@ player_scene = ExtResource("9_xlujn")
 environment = SubResource("Environment_eekjw")
 
 [node name="Warrior" parent="." instance=ExtResource("9_xlujn")]
-transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 1.33497, 0)
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0.338005, 0.853862, 4.26564)
 visible = false
 
 [node name="Skeleton3D" parent="Warrior/Armature" index="0"]
-bones/0/position = Vector3(0.0346507, 1.03013, -0.0341088)
-bones/0/rotation = Quaternion(-0.0384613, -0.367427, -0.0148944, 0.929137)
-bones/1/rotation = Quaternion(0.0705936, 0.0411761, -0.00845021, 0.996619)
-bones/2/rotation = Quaternion(0.0976236, 0.0798818, -0.0212002, 0.991786)
-bones/4/rotation = Quaternion(0.0976418, 0.0798769, -0.0211941, 0.991785)
-bones/8/rotation = Quaternion(-0.0496273, -0.0107121, 0.00232932, 0.998708)
-bones/10/rotation = Quaternion(-0.0651757, 0.177617, -0.00711536, 0.981913)
-bones/13/rotation = Quaternion(0.616654, 0.374657, -0.587815, 0.365846)
-bones/15/rotation = Quaternion(0.366738, -0.0691703, 0.0979158, 0.922568)
-bones/17/rotation = Quaternion(-0.18371, 0.33629, 0.370589, 0.846064)
-bones/19/rotation = Quaternion(-0.101299, 0.141229, -0.0769285, 0.981771)
-bones/21/rotation = Quaternion(-0.0674447, 0.814164, 0.0322241, 0.575804)
-bones/22/rotation = Quaternion(0.349389, 0.0347115, 0.0738481, 0.933418)
-bones/25/rotation = Quaternion(0.661897, -0.339689, 0.54832, 0.381902)
-bones/27/rotation = Quaternion(0.356974, 0.115308, 0.14822, 0.915043)
-bones/29/rotation = Quaternion(-0.107681, -0.344863, -0.35042, 0.864107)
-bones/31/rotation = Quaternion(0.000691682, -0.0574935, -0.15224, 0.98667)
-bones/33/rotation = Quaternion(0.0423242, 0.658384, 0.00327293, 0.751484)
-bones/34/rotation = Quaternion(-0.29579, -0.032101, 0.0456758, 0.95362)
-bones/37/rotation = Quaternion(0.0727681, 0.268463, 0.95429, -0.109377)
-bones/38/rotation = Quaternion(-0.39797, 0.118902, -0.0267118, 0.909268)
-bones/39/rotation = Quaternion(0.581465, -0.0191859, -0.0494104, 0.811843)
-bones/40/rotation = Quaternion(0.284221, -0.0661784, -0.00327811, 0.956467)
-bones/42/rotation = Quaternion(-0.124006, -0.0475926, 0.980744, 0.143175)
-bones/43/rotation = Quaternion(-0.321291, 0.0644073, -0.030704, 0.944289)
-bones/44/rotation = Quaternion(0.70521, 0.0852349, 0.145261, 0.688704)
+bones/0/position = Vector3(0.0353684, 1.03005, -0.0353496)
+bones/0/rotation = Quaternion(-0.0387122, -0.367096, -0.0149171, 0.929258)
+bones/1/rotation = Quaternion(0.0704054, 0.0409725, -0.00834653, 0.996642)
+bones/2/rotation = Quaternion(0.0972334, 0.0795507, -0.0210275, 0.991854)
+bones/4/rotation = Quaternion(0.0971984, 0.0796246, -0.0210569, 0.991851)
+bones/8/rotation = Quaternion(-0.0438151, -0.0108587, 0.00211774, 0.998978)
+bones/10/rotation = Quaternion(-0.0379125, 0.176212, -0.00585039, 0.983605)
+bones/13/rotation = Quaternion(0.614166, 0.377926, -0.587481, 0.367203)
+bones/15/rotation = Quaternion(0.366124, -0.070245, 0.0982256, 0.922697)
+bones/17/rotation = Quaternion(-0.182977, 0.335553, 0.367861, 0.847704)
+bones/19/rotation = Quaternion(-0.110751, 0.141535, -0.0851446, 0.980027)
+bones/21/rotation = Quaternion(-0.0662584, 0.81439, 0.0287326, 0.575806)
+bones/22/rotation = Quaternion(0.34879, 0.0348496, 0.0740196, 0.933623)
+bones/25/rotation = Quaternion(0.65897, -0.343419, 0.548608, 0.383212)
+bones/27/rotation = Quaternion(0.355197, 0.116402, 0.148293, 0.915585)
+bones/29/rotation = Quaternion(-0.105695, -0.34503, -0.351549, 0.863826)
+bones/31/rotation = Quaternion(-0.00419832, -0.0550309, -0.136458, 0.989107)
+bones/33/rotation = Quaternion(0.0380777, 0.658059, 0.00546621, 0.751983)
+bones/34/rotation = Quaternion(-0.29764, -0.0318094, 0.0447388, 0.953099)
+bones/37/rotation = Quaternion(0.0725314, 0.268683, 0.954262, -0.109236)
+bones/38/rotation = Quaternion(-0.397105, 0.119481, -0.0269286, 0.909564)
+bones/39/rotation = Quaternion(0.580496, -0.0193615, -0.0497326, 0.812512)
+bones/40/rotation = Quaternion(0.28386, -0.0653168, -0.00307413, 0.956634)
+bones/42/rotation = Quaternion(-0.124153, -0.0465381, 0.980772, 0.143203)
+bones/43/rotation = Quaternion(-0.322906, 0.0642861, -0.0304179, 0.943755)
+bones/44/rotation = Quaternion(0.705636, 0.0850243, 0.144883, 0.688374)
 
 [node name="Arm" parent="Warrior/Armature/Skeleton3D" index="5"]
-transform = Transform3D(0.590083, -0.209911, 0.779577, 0.115465, -0.933739, -0.338819, 0.799043, 0.289945, -0.526746, -0.426608, 1.03427, -0.257004)
+transform = Transform3D(0.579136, -0.245879, 0.777267, 0.0815395, -0.931181, -0.355322, 0.811143, 0.269158, -0.519232, -0.434075, 1.03861, -0.260014)
 
 [node name="CollisionShape3D" parent="Warrior" index="2"]
 disabled = true
-
-[node name="GridMap" type="GridMap" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
-mesh_library = ExtResource("2_l4vgv")
-cell_size = Vector3(1, 1, 1)
-cell_center_y = false
-data = {
-"cells": PackedInt32Array(65535, 65535, 2, 65535, 0, 2, 0, 0, 2, 0, 65535, 2, 65534, 65534, 1048577, 1, 65534, 1, 1, 1, 1441793, 0, 2, 1441793, 65535, 2, 655361, 65533, 65535, 1048577, 65533, 0, 655361, 65534, 1, 655361, 65534, 65535, 1048579, 65534, 0, 655363, 65535, 1, 655363, 0, 1, 1441795, 0, 65534, 3, 65535, 65534, 1048579, 1, 65535, 3, 1, 0, 1441795, 2, 0, 1441793, 2, 65535, 1, 0, 65533, 1441792, 0, 65532, 1441792, 0, 65531, 1441792, 0, 65530, 1441792, 0, 65529, 1441792, 0, 65528, 1441792, 0, 65527, 1441792, 0, 65526, 1441792, 0, 65525, 1441792, 0, 65524, 1441792, 65535, 65524, 1048576, 65535, 65525, 1048576, 65535, 65526, 1048576, 65535, 65527, 1048576, 65535, 65528, 1048576, 65535, 65529, 1048576, 65535, 65530, 1048576, 65535, 65531, 1048576, 65535, 65532, 1048576, 65535, 65533, 1048576, 65535, 65523, 1048576, 65535, 65522, 1048576, 65535, 65521, 1048576, 0, 65523, 1441792, 0, 65522, 1441792, 0, 65521, 1441792, 1, 65520, 655360, 2, 65520, 655360, 3, 65520, 655360, 4, 65520, 655360, 65534, 65520, 655360, 65533, 65520, 655360, 65532, 65520, 655360, 65531, 65520, 655360, 65530, 65520, 655361, 65530, 65519, 1048576, 65530, 65518, 1048576, 65530, 65517, 1048576, 65530, 65512, 1048576, 65530, 65511, 1048576, 65530, 65510, 1048577, 65531, 65510, 0, 65532, 65510, 0, 65533, 65510, 0, 65534, 65510, 0, 65535, 65510, 0, 0, 65510, 0, 1, 65510, 0, 3, 65510, 0, 5, 65514, 1441792, 5, 65515, 1441792, 5, 65516, 1441792, 5, 65517, 1441792, 5, 65518, 1441792, 5, 65519, 1441792, 5, 65520, 1441793, 0, 65520, 1441795, 65535, 65520, 655363, 2, 65510, 0, 4, 65510, 0, 5, 65513, 1441792, 5, 65512, 1441792, 5, 65511, 1441792, 5, 65510, 1, 2, 65511, 655360, 3, 65512, 1048576, 1, 65512, 1441792, 2, 65513, 0, 3, 65511, 655363, 4, 65511, 2, 4, 65512, 2, 4, 65513, 2, 4, 65514, 2, 3, 65514, 2, 2, 65514, 2, 0, 65513, 2, 0, 65512, 2, 0, 65511, 2, 1, 65511, 1441795, 3, 65513, 1048579, 1, 65513, 3, 65530, 65513, 1048576, 65534, 65512, 1048576, 65533, 65511, 655360, 65532, 65512, 1441792, 65533, 65513, 0, 65534, 65511, 655363, 65534, 65513, 1048579, 65532, 65513, 3, 65532, 65511, 1441795, 65535, 65511, 1441794, 65535, 65512, 1441794, 65535, 65513, 1441794, 65532, 65514, 1441794, 65531, 65514, 1441794, 65531, 65513, 1441794, 65531, 65512, 1441794, 65531, 65511, 1441794, 2, 65519, 0, 1, 65518, 1441792, 2, 65517, 655360, 3, 65518, 1048576, 1, 65519, 3, 1, 65517, 1441795, 3, 65517, 655363, 3, 65519, 1048579, 0, 65519, 1048578, 0, 65518, 1048578, 0, 65517, 1048578, 2, 65515, 1048578, 3, 65515, 1048578, 4, 65515, 1048578, 4, 65516, 1048578, 3, 65516, 1048578, 2, 65516, 1048578, 4, 65517, 1048578, 4, 65518, 1048578, 4, 65519, 1048578, 65533, 65519, 0, 65532, 65518, 1441792, 65533, 65517, 655360, 65534, 65518, 1048576, 65534, 65519, 1048579, 65532, 65519, 3, 65532, 65517, 1441795, 65534, 65517, 655363, 65535, 65519, 655362, 65535, 65518, 655362, 65535, 65517, 655362, 65533, 65515, 655362, 65532, 65515, 655362, 65531, 65515, 655362, 65531, 65516, 655362, 65532, 65516, 655362, 65533, 65516, 655362, 65531, 65517, 655362, 65531, 65518, 655362, 65531, 65519, 655362, 65530, 65516, 1048576, 65530, 65515, 1048576, 65530, 65514, 1048576, 0, 65516, 0, 0, 65514, 655360, 1, 65515, 1048576, 1, 65516, 1048579, 1, 65514, 655363, 65535, 65516, 0, 65535, 65514, 655360, 65534, 65514, 1441795, 65534, 65516, 3, 65534, 65515, 1441792, 65533, 65514, 1441794)
-}
-metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="PauseMenu" parent="." instance=ExtResource("4_h3cdc")]
 visible = false
@@ -131,23 +125,32 @@ spawn_path = NodePath("..")
 [node name="Torches" type="Node3D" parent="."]
 
 [node name="torch" parent="Torches" instance=ExtResource("6_p0kxb")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.80851, 1.6, 1.57733e-07)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 2.5, -3)
 
 [node name="torch2" parent="Torches" instance=ExtResource("6_p0kxb")]
-transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 5.8297, 1.6, -1.78002e-08)
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 6.00124, 2.5, -3)
 
 [node name="GreatSword" parent="." instance=ExtResource("8_jbq5d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48992, -1.78814e-07, -0.511967)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49191, 0.433553, -2.30624)
 
 [node name="Hammer" parent="." instance=ExtResource("7_q2gpk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.92865, 1.78814e-07, -1.12404)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.91352, 0.944735, -1.12404)
 
 [node name="Goblin_Male" parent="." instance=ExtResource("9_n7o15")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.0414454, 0, -2.8442)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.33149, 0.144112, -6.23549)
 
-[node name="StateChartDebugger" parent="." instance=ExtResource("10_sr8pd")]
-offset_left = 864.0
-initial_node_to_watch = NodePath("../Warrior")
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_dos0o")
+
+[node name="GridMap" type="GridMap" parent="NavigationRegion3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh_library = ExtResource("3_f5agq")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65534, 1, 3, 0, 1, 3, 2, 1, 3, 4, 1, 131075, 65532, 1, 131075, 65532, 65535, 131075, 65534, 65535, 131075, 0, 65535, 131075, 2, 65535, 131075, 4, 65535, 131075, 4, 65533, 131075, 2, 65533, 131075, 0, 65533, 131075, 65534, 65533, 131075, 65532, 65533, 131075, 65532, 65531, 131075, 65534, 65531, 131075, 0, 65531, 131075, 65540, 2, 131077, 65538, 2, 131077, 65536, 2, 131077, 131070, 2, 131077, 131068, 2, 196613, 131067, 1, 851973, 131067, 65535, 851973, 131067, 65533, 851973, 131067, 65531, 851973, 131068, 65530, 589829, 65541, 1, 327685, 65541, 65535, 327685, 65541, 65533, 327685, 65541, 65531, 327685, 65540, 65530, 65541, 0, 65530, 0, 65539, 65530, 589829, 131069, 65530, 589829, 3, 65534, 655361, 65533, 65534, 655361, 196608, 2, 589829, 262142, 2, 589829, 262140, 2, 589829, 196610, 2, 589829, 196612, 2, 589829, 262139, 1, 327685, 262139, 65535, 327685, 262139, 65533, 327685, 262139, 65531, 327685, 262140, 65530, 65541, 262141, 65530, 65541, 196613, 1, 851973, 196613, 65535, 851973, 196613, 65533, 851973, 196610, 65530, 589829, 196612, 65530, 589829, 196613, 65531, 327685, 327676, 65531, 131075, 327678, 65531, 131075, 262144, 65531, 131075, 262146, 65531, 131075, 262148, 65531, 131075, 262148, 65533, 131075, 262146, 65533, 131075, 262144, 65533, 131075, 327678, 65533, 131075, 327676, 65533, 131075, 327676, 65535, 131075, 327678, 65535, 131075, 262144, 65535, 131075, 262146, 65535, 131075, 262148, 65535, 131075, 262148, 1, 131075, 262146, 1, 131075, 262144, 1, 131075, 327678, 1, 131075, 327676, 1, 131075, 131076, 2, 589829, 131075, 2, 589829, 131073, 2, 589829, 196607, 2, 589829, 196605, 2, 589829, 196604, 2, 589829, 196603, 1, 983045, 196603, 65535, 983045, 196603, 65533, 983045, 196603, 65531, 983045, 196604, 65530, 196613, 196605, 65530, 196613, 131077, 65531, 458757, 131077, 65533, 458757, 131077, 65535, 458757, 131077, 1, 458757, 131076, 65530, 720901, 131075, 65530, 720901, 4, 65531, 131075, 2, 65531, 131075)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/Host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/Join" to="." method="_on_join_pressed"]

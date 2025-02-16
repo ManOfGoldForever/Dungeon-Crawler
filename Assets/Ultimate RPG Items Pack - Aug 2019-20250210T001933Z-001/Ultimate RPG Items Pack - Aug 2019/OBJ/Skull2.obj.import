@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://doq4507tn1xqa"
+path="res://.godot/imported/Skull2.obj-b77a2e17d98517d69ed957fe1bb6971b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Skull2.obj-b77a2e17d98517d69ed957fe1bb6971b.mesh"]
+
+source_file="res://Assets/Ultimate RPG Items Pack - Aug 2019-20250210T001933Z-001/Ultimate RPG Items Pack - Aug 2019/OBJ/Skull2.obj"
+dest_files=["res://.godot/imported/Skull2.obj-b77a2e17d98517d69ed957fe1bb6971b.mesh", "res://.godot/imported/Skull2.obj-b77a2e17d98517d69ed957fe1bb6971b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

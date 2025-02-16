@@ -66,6 +66,6 @@ draw_pass_1 = SubResource("QuadMesh_fp7ge")
 [node name="OmniLight3D" type="OmniLight3D" parent="torch_Low/GPUParticles3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00977576)
 light_color = Color(1, 0.597798, 0.305315, 1)
-light_energy = 6.0
+light_energy = 10.0
 light_indirect_energy = 6.0
-omni_range = 10.0
+omni_range = 15.0

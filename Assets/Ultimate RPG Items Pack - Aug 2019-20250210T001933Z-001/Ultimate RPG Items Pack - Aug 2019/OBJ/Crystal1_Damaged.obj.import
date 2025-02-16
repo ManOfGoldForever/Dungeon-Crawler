@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://h85pt0k0ws8p"
+path="res://.godot/imported/Crystal1_Damaged.obj-98ff5a1c8ced7aa76512203ba4a5d13c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Crystal1_Damaged.obj-98ff5a1c8ced7aa76512203ba4a5d13c.mesh"]
+
+source_file="res://Assets/Ultimate RPG Items Pack - Aug 2019-20250210T001933Z-001/Ultimate RPG Items Pack - Aug 2019/OBJ/Crystal1_Damaged.obj"
+dest_files=["res://.godot/imported/Crystal1_Damaged.obj-98ff5a1c8ced7aa76512203ba4a5d13c.mesh", "res://.godot/imported/Crystal1_Damaged.obj-98ff5a1c8ced7aa76512203ba4a5d13c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

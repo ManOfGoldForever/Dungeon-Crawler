@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://pyivua75aal1"
+path="res://.godot/imported/Snowflake1.obj-26ab32ed54446a80f5a257c7cfa5f2ce.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Snowflake1.obj-26ab32ed54446a80f5a257c7cfa5f2ce.mesh"]
+
+source_file="res://Assets/Ultimate RPG Items Pack - Aug 2019-20250210T001933Z-001/Ultimate RPG Items Pack - Aug 2019/OBJ/Snowflake1.obj"
+dest_files=["res://.godot/imported/Snowflake1.obj-26ab32ed54446a80f5a257c7cfa5f2ce.mesh", "res://.godot/imported/Snowflake1.obj-26ab32ed54446a80f5a257c7cfa5f2ce.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
